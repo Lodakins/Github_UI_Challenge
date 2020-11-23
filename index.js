@@ -1,7 +1,7 @@
 var express = require('express');
 var chalk = require('chalk');
-var path = require('path')
-require('dotenv').config()
+var path = require('path');
+require('dotenv').config();
 
 
 var app = express();

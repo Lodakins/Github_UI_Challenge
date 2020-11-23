@@ -17,7 +17,7 @@ let proid = document.querySelector('#proid');
 
 fetch('https://api.github.com/graphql', {
   method: 'POST',
-  headers: { 'Content-Type': 'application/json',"Authorization": `bearer ed644008c7805d0f7774c3098a4b3dc2d75758b7` },
+  headers: { 'Content-Type': 'application/json',"Authorization": `bearer 034d7bf6b475be365c3f27dcd777fca910853e81` },
   body: JSON.stringify({  query: "query { viewer { login avatarUrl bio name repositories(first:20){ nodes { name description forkCount stargazerCount updatedAt languages(first:1){ nodes {name color} } } } }}"}),
 })
   .then(res => res.json())
@@ -63,20 +63,7 @@ window.addEventListener("scroll",function(e){
      
 });
 
-//   description: "30 Day Vanilla JS Challenge"
-//   forkCount: 0
-//   languages:
-//   nodes: Array(1)
-//   0:
-//   color: "#e34c26"
-//   name: "HTML"
-//   __proto__: Object
-//   length: 1
-//   __proto__: Array(0)
-//   __proto__: Object
-//   name: "JavaScript30"
-//   stargazerCount: 0
-//   updatedAt: "2019-08-01T23:33:22Z"
+
   function displayRepodata(data){
       let html=``;
       for(item of data){
